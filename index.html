@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TSB Financial Empire — Engineered.</title>
+<meta name="description" content="TSB Financial Empire — multi-vertical financial conglomerate commanding capital markets, private equity, fintech, music, and jewelry across six continents. Founded by Tehki Santiago Bill.">
+<meta name="keywords" content="TSB Financial Empire, Tehki Santiago Bill, capital markets, private equity, MiDi TecHNeeK, Warrior Breed DNA, Special Blend Protocol, MCMG Label, TSB Jewelry">
+<meta name="author" content="Tehki Santiago Bill">
+<meta property="og:title" content="TSB Financial Empire — Engineered.">
+<meta property="og:description" content="Empire Is Not Built. It Is Engineered.">
+<meta property="og:image" content="img-mascot-crypto.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23030407'/%3E%3Ctext x='2' y='24' font-family='monospace' font-weight='900' font-size='14' fill='%23ff0033'%3ET%3C/text%3E%3Ctext x='11' y='24' font-family='monospace' font-weight='900' font-size='14' fill='%2339ff14'%3ES%3C/text%3E%3Ctext x='20' y='24' font-family='monospace' font-weight='900' font-size='14' fill='%239b00ff'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--red:#ff0033;--slime:#39ff14;--purple:#9b00ff;--gold:#ffd700;--white:#f0f0f0;--black:#030407;--panel:#080b12;--border:rgba(255,255,255,0.06);--gr:rgba(57,255,20,0.05);--gred:0 0 20px #ff003355,0 0 50px #ff003318;--gslime:0 0 20px #39ff1455,0 0 50px #39ff1418;--gpurple:0 0 20px #9b00ff55,0 0 50px #9b00ff18;--ggold:0 0 20px #ffd70055,0 0 50px #ffd70018;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--white);font-family:'Inter',sans-serif;font-weight:300;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.07) 2px,rgba(0,0,0,0.07) 4px);pointer-events:none;z-index:9999;}
+.gbg{position:fixed;inset:0;background-image:linear-gradient(var(--gr) 1px,transparent 1px),linear-gradient(90deg,var(--gr) 1px,transparent 1px);background-size:44px 44px;pointer-events:none;z-index:0;}
+section{position:relative;z-index:1;}
+.sw{max-width:1360px;margin:0 auto;padding:100px 48px;}
+.eye{font-family:'Share Tech Mono',monospace;font-size:.6rem;letter-spacing:.28em;color:var(--red);text-transform:uppercase;margin-bottom:14px;}
+.st{font-family:'Orbitron',monospace;font-weight:900;font-size:clamp(1.8rem,4vw,3rem);margin-bottom:52px;line-height:1.1;}
+.st .r{color:var(--red);}.st .s{color:var(--slime);}.st .p{color:var(--purple);}.st .g{color:var(--gold);}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .75s ease,transform .75s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+img{display:block;}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:0 48px;height:70px;background:rgba(3,4,7,.94);border-bottom:1px solid rgba(57,255,20,.1);backdrop-filter:blur(18px);}
+.nav-logo{font-family:'Orbitron',monospace;font-weight:900;font-size:1.1rem;letter-spacing:.1em;display:flex;align-items:center;text-decoration:none;}
+.nav-logo .t{color:var(--red);}.nav-logo .s{color:var(--slime);}.nav-logo .b{color:var(--purple);}.nav-logo .rest{color:rgba(240,240,240,.75);margin-left:5px;font-size:.85rem;}
+.nav-links{display:flex;gap:22px;list-style:none;}
+.nav-links a{font-family:'Share Tech Mono',monospace;font-size:.65rem;color:rgba(240,240,240,.35);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .2s;}
+.nav-links a:hover{color:var(--slime);}
+.nav-right{display:flex;align-items:center;gap:14px;}
+.nav-cta{font-family:'Orbitron',monospace;font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:8px 18px;border:1px solid var(--red);color:var(--red);background:transparent;cursor:pointer;transition:all .25s;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px));}
+.nav-cta:hover{background:var(--red);color:#fff;box-shadow:var(--gred);}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+.ham span{display:block;width:24px;height:2px;background:var(--white);transition:all .3s;}
+.ham.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.ham.open span:nth-child(2){opacity:0;}
+.ham.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mob-menu{display:none;position:fixed;top:70px;left:0;right:0;background:rgba(3,4,7,.98);border-bottom:1px solid rgba(57,255,20,.1);padding:24px 24px 32px;z-index:999;backdrop-filter:blur(18px);}
+.mob-menu.open{display:flex;flex-direction:column;gap:18px;}
+.mob-menu a{font-family:'Share Tech Mono',monospace;font-size:.82rem;color:rgba(240,240,240,.52);text-decoration:none;letter-spacing:.12em;text-transform:uppercase;padding:8px 0;border-bottom:1px solid var(--border);}
+.mob-menu a:hover{color:var(--slime);}
+.mob-cta{font-family:'Orbitron',monospace;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:13px;border:1px solid var(--red);color:var(--red);background:transparent;cursor:pointer;margin-top:6px;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px));}
+/* BUTTONS */
+.bp{font-family:'Orbitron',monospace;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:15px 32px;background:linear-gradient(135deg,var(--red),var(--purple));color:#fff;border:none;cursor:pointer;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));transition:all .3s;box-shadow:var(--gred);}
+.bp:hover{box-shadow:var(--gpurple),var(--gred);transform:translateY(-3px);}
+.bs{font-family:'Share Tech Mono',monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;padding:14px 32px;background:transparent;color:var(--slime);border:1px solid var(--slime);cursor:pointer;transition:all .3s;}
+.bs:hover{background:rgba(57,255,20,.07);box-shadow:var(--gslime);}
+.bg{font-family:'Orbitron',monospace;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:15px 32px;background:linear-gradient(135deg,var(--gold),#ff9900);color:#000;border:none;cursor:pointer;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));transition:all .3s;}
+.bg:hover{box-shadow:var(--ggold);transform:translateY(-3px);}
+/* HERO */
+#hero{min-height:100vh;display:flex;flex-direction:column;position:relative;overflow:hidden;padding-top:70px;}
+.hbg{position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(155,0,255,.1) 0%,transparent 60%),radial-gradient(ellipse at 70% 30%,rgba(255,0,51,.08) 0%,transparent 50%);z-index:1;}
+.hcontent{flex:1;display:flex;align-items:center;justify-content:center;position:relative;z-index:2;padding:40px 24px 0;}
+.hinner{display:grid;grid-template-columns:1fr 400px;gap:48px;align-items:center;max-width:1300px;width:100%;margin:0 auto;}
+.htag{font-family:'Share Tech Mono',monospace;font-size:.64rem;letter-spacing:.28em;color:var(--slime);text-transform:uppercase;margin-bottom:18px;animation:fadeUp .8s ease both;}
+.htag span{color:rgba(57,255,20,.35);margin:0 8px;}
+h1.ht{font-family:'Orbitron',monospace;font-weight:900;font-size:clamp(2.4rem,6vw,5.5rem);line-height:.95;letter-spacing:-.02em;animation:fadeUp .8s .1s ease both;}
+.ht .l1{display:block;color:var(--white);}
+.ht .l2{display:block;background:linear-gradient(100deg,var(--red),var(--purple),var(--slime));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:italic;}
+.hsub{font-size:1rem;color:rgba(240,240,240,.46);line-height:1.75;margin-top:22px;max-width:500px;animation:fadeUp .8s .2s ease both;}
+.hstats{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-top:32px;animation:fadeUp .8s .3s ease both;}
+.hstat{background:var(--panel);border:1px solid var(--border);padding:14px 18px;}
+.hstat.r{border-left:3px solid var(--red);}.hstat.s{border-left:3px solid var(--slime);}.hstat.p{border-left:3px solid var(--purple);}.hstat.g{border-left:3px solid var(--gold);}
+.hstat-val{font-family:'Orbitron',monospace;font-weight:900;font-size:clamp(1.3rem,2.5vw,1.8rem);line-height:1;}
+.hstat-val.r{color:var(--red);}.hstat-val.s{color:var(--slime);}.hstat-val.p{color:var(--purple);}.hstat-val.g{color:var(--gold);}
+.hstat-lbl{font-family:'Share Tech Mono',monospace;font-size:.54rem;letter-spacing:.14em;color:rgba(240,240,240,.24);margin-top:4px;text-transform:uppercase;}
+.hbtns{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap;animation:fadeUp .8s .4s ease both;}
+/* MASCOT HERO */
+.hmascot{position:relative;display:flex;align-items:flex-end;justify-content:center;animation:fadeUp .8s .2s ease both;}
+.mascot-glow{position:absolute;bottom:5%;left:50%;transform:translateX(-50%);width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,0,51,.28) 0%,rgba(57,255,20,.1) 50%,transparent 75%);filter:blur(28px);animation:mPulse 3s ease-in-out infinite;pointer-events:none;}
+.mascot-img{width:100%;max-width:400px;position:relative;z-index:2;filter:drop-shadow(0 0 28px rgba(255,0,51,.45)) drop-shadow(0 0 55px rgba(57,255,20,.2));animation:mFloat 4s ease-in-out infinite;}
+.mascot-badge{position:absolute;top:18px;right:0;background:var(--black);border:1px solid var(--slime);padding:7px 12px;font-family:'Share Tech Mono',monospace;font-size:.56rem;letter-spacing:.14em;color:var(--slime);text-transform:uppercase;box-shadow:var(--gslime);z-index:3;}
+.mascot-badge::before{content:'●';margin-right:5px;animation:blink 1.2s ease-in-out infinite;}
+/* TICKER */
+.tw{width:100%;padding:9px 0;border-top:1px solid rgba(255,0,51,.1);border-bottom:1px solid rgba(255,0,51,.1);background:rgba(255,0,51,.02);overflow:hidden;position:relative;z-index:2;}
+.tk{display:flex;gap:55px;animation:ticker 34s linear infinite;width:max-content;}
+.ti{font-family:'Share Tech Mono',monospace;font-size:.65rem;letter-spacing:.1em;white-space:nowrap;color:rgba(240,240,240,.38);}
+.ti .up{color:var(--slime);}.ti .pu{color:var(--purple);}.ti .go{color:var(--gold);}
+/* ABOUT */
+#about{background:linear-gradient(180deg,transparent,rgba(155,0,255,.025),transparent);}
+.agrid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.aimgs{position:relative;height:500px;}
+.aim{position:absolute;top:0;left:0;width:68%;height:88%;object-fit:cover;border:1px solid rgba(255,0,51,.28);box-shadow:var(--gred);}
+.aacc{position:absolute;bottom:0;right:0;width:52%;height:62%;object-fit:cover;border:1px solid rgba(57,255,20,.28);box-shadow:var(--gslime);}
+.abdg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:88px;height:88px;border-radius:50%;background:var(--black);border:2px solid var(--purple);display:flex;align-items:center;justify-content:center;box-shadow:var(--gpurple);z-index:5;}
+.abdg img{width:70px;height:70px;border-radius:50%;object-fit:cover;}
+.atext h2{font-family:'Orbitron',monospace;font-weight:900;font-size:clamp(1.4rem,2.8vw,2.2rem);margin-bottom:18px;line-height:1.1;}
+.atext h2 em{font-style:italic;color:var(--red);}
+.atext p{font-size:.9rem;color:rgba(240,240,240,.46);line-height:1.85;margin-bottom:15px;}
+.atags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+.atag{font-family:'Share Tech Mono',monospace;font-size:.56rem;letter-spacing:.12em;padding:4px 11px;border:1px solid;text-transform:uppercase;}
+.atag.r{color:var(--red);border-color:rgba(255,0,51,.3);}.atag.s{color:var(--slime);border-color:rgba(57,255,20,.3);}.atag.p{color:var(--purple);border-color:rgba(155,0,255,.3);}.atag.g{color:var(--gold);border-color:rgba(255,215,0,.3);}
+/* Z-COIN */
+#zcoin{border-top:1px solid var(--border);background:var(--panel);}
+.zc-grid{display:grid;grid-template-columns:480px 1fr;gap:56px;align-items:center;}
+.zc-img{position:relative;}
+.zc-img img{width:100%;filter:drop-shadow(0 0 38px rgba(255,0,51,.5)) drop-shadow(0 0 75px rgba(57,255,20,.22));animation:mFloat 4s ease-in-out infinite;}
+.zc-img::before{content:'';position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);width:55%;height:35px;background:radial-gradient(ellipse,rgba(255,0,51,.4) 0%,transparent 75%);filter:blur(10px);}
+.zc-stats{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:24px;}
+.zc-stat{background:var(--black);border:1px solid var(--border);padding:18px;text-align:center;}
+.zc-stat-v{font-family:'Orbitron',monospace;font-weight:900;font-size:1.3rem;margin-bottom:4px;}
+.zc-stat-l{font-family:'Share Tech Mono',monospace;font-size:.52rem;letter-spacing:.14em;color:rgba(240,240,240,.24);text-transform:uppercase;}
+.zc-text h3{font-family:'Orbitron',monospace;font-weight:900;font-size:clamp(1.3rem,3vw,2.1rem);line-height:1.1;margin-bottom:16px;}
+.zc-text h3 .r{color:var(--red);}.zc-text h3 .s{color:var(--slime);}
+.zc-text p{font-size:.88rem;color:rgba(240,240,240,.46);line-height:1.85;margin-bottom:13px;}
+/* PROTOCOL */
+#protocol{border-top:1px solid var(--border);}
+.bdiag{position:relative;width:100%;max-width:860px;margin:0 auto 52px;height:440px;}
+.bsvg{position:absolute;inset:0;width:100%;height:100%;}
+.ring{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border-radius:50%;border:1px solid;animation:spin linear infinite;}
+.ring-1{width:200px;height:200px;border-color:rgba(255,0,51,.28);animation-duration:10s;}
+.ring-2{width:298px;height:298px;border-color:rgba(155,0,255,.18);animation-duration:18s;animation-direction:reverse;}
+.ring-3{width:396px;height:396px;border-color:rgba(57,255,20,.11);animation-duration:28s;}
+.bcore{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:118px;height:118px;border-radius:50%;background:radial-gradient(circle,rgba(155,0,255,.95) 0%,rgba(255,0,51,.5) 55%,transparent 80%);box-shadow:0 0 50px rgba(155,0,255,.5),0 0 100px rgba(255,0,51,.2);display:flex;align-items:center;justify-content:center;z-index:10;animation:cPulse 3s ease-in-out infinite;}
+.bct{font-family:'Orbitron',monospace;font-size:.45rem;font-weight:900;letter-spacing:.1em;text-align:center;line-height:1.6;}
+.bnode{position:absolute;display:flex;flex-direction:column;align-items:center;gap:6px;}
+.bdot{width:10px;height:10px;border-radius:50%;border:2px solid;animation:blink 2s ease-in-out infinite;}
+.blbl{font-family:'Share Tech Mono',monospace;font-size:.54rem;letter-spacing:.08em;text-align:center;line-height:1.4;max-width:72px;}
+.bnode.r .bdot{border-color:var(--red);background:rgba(255,0,51,.2);box-shadow:var(--gred);}.bnode.r .blbl{color:var(--red);}
+.bnode.s .bdot{border-color:var(--slime);background:rgba(57,255,20,.2);box-shadow:var(--gslime);}.bnode.s .blbl{color:var(--slime);}
+.bnode.p .bdot{border-color:var(--purple);background:rgba(155,0,255,.2);box-shadow:var(--gpurple);}.bnode.p .blbl{color:var(--purple);}
+.pcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:2px;}
+.pcard{background:var(--panel);border:1px solid var(--border);padding:26px 21px;position:relative;overflow:hidden;transition:all .3s;}
+.pcard::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;}
+.pcard.r::before{background:var(--red);}.pcard.s::before{background:var(--slime);}.pcard.p::before{background:var(--purple);}.pcard.w::before{background:rgba(240,240,240,.2);}
+.pcard:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.1);}
+.pcn{font-family:'Share Tech Mono',monospace;font-size:.53rem;letter-spacing:.2em;color:rgba(240,240,240,.17);margin-bottom:12px;}
+.pct{font-family:'Orbitron',monospace;font-weight:700;font-size:.78rem;letter-spacing:.07em;margin-bottom:9px;}
+.pct.r{color:var(--red);}.pct.s{color:var(--slime);}.pct.p{color:var(--purple);}.pct.w{color:var(--white);}
+.pcb{font-size:.74rem;color:rgba(240,240,240,.36);line-height:1.7;}
+/* METRICS */
+#metrics{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:linear-gradient(90deg,rgba(255,0,51,.025),rgba(155,0,255,.03),rgba(57,255,20,.015));}
+.mrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));}
+.met{text-align:center;padding:52px 12px;border-right:1px solid var(--border);}
+.met:last-child{border-right:none;}
+.mv{font-family:'Orbitron',monospace;font-weight:900;font-size:clamp(1.5rem,3vw,2.4rem);line-height:1;margin-bottom:7px;}
+.mv.r{color:var(--red);text-shadow:var(--gred);}.mv.s{color:var(--slime);text-shadow:var(--gslime);}.mv.p{color:var(--purple);text-shadow:var(--gpurple);}.mv.g{color:var(--gold);text-shadow:var(--ggold);}
+.ml{font-family:'Share Tech Mono',monospace;font-size:.55rem;letter-spacing:.16em;color:rgba(240,240,240,.24);text-transform:uppercase;}
+/* VERTICALS */
+#verticals{background:var(--panel);}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:2px;}
+.vcard{background:var(--black);border:1px solid var(--border);padding:38px 26px;position:relative;overflow:hidden;transition:all .3s;}
+.vcard::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;opacity:0;transition:opacity .3s;}
+.va::after{background:linear-gradient(90deg,var(--red),var(--purple));}.vb::after{background:linear-gradient(90deg,var(--slime),var(--purple));}.vc::after{background:linear-gradient(90deg,var(--purple),var(--red));}.vd::after{background:linear-gradient(90deg,var(--red),var(--slime));}.ve::after{background:linear-gradient(90deg,var(--purple),var(--slime));}.vf::after{background:linear-gradient(90deg,var(--slime),var(--red));}.vg::after{background:linear-gradient(90deg,var(--gold),var(--red));}
+.vcard:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.1);}.vcard:hover::after{opacity:1;}
+.vfl{display:inline-block;font-family:'Share Tech Mono',monospace;font-size:.53rem;letter-spacing:.14em;padding:3px 7px;margin-bottom:13px;text-transform:uppercase;border:1px solid;}
+.vfl.r{color:var(--red);border-color:rgba(255,0,51,.3);}.vfl.s{color:var(--slime);border-color:rgba(57,255,20,.3);}.vfl.p{color:var(--purple);border-color:rgba(155,0,255,.3);}.vfl.g{color:var(--gold);border-color:rgba(255,215,0,.3);}
+.vico{font-size:1.4rem;margin-bottom:14px;display:block;}
+.vt{font-family:'Orbitron',monospace;font-size:.82rem;font-weight:700;letter-spacing:.07em;margin-bottom:10px;color:var(--white);}
+.vb{font-size:.74rem;color:rgba(240,240,240,.34);line-height:1.8;}
+/* JEWELRY */
+#jewelry{border-top:1px solid var(--border);background:linear-gradient(135deg,rgba(255,215,0,.04),rgba(255,0,51,.025),rgba(155,0,255,.02));}
+.jgrid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+.jtext h3{font-family:'Orbitron',monospace;font-weight:900;font-size:clamp(1.3rem,2.5vw,2rem);line-height:1.1;margin-bottom:16px;}
+.jtext h3 .g{color:var(--gold);}.jtext h3 .r{color:var(--red);}
+.jtext p{font-size:.88rem;color:rgba(240,240,240,.46);line-height:1.85;margin-bottom:13px;}
+.jfeatures{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:24px;}
+.jfeat{background:var(--panel);border:1px solid var(--border);padding:20px;border-top:2px solid var(--gold);}
+.jfeat-ico{font-size:1.3rem;margin-bottom:10px;}
+.jfeat-t{font-family:'Orbitron',monospace;font-size:.72rem;font-weight:700;color:var(--gold);margin-bottom:7px;}
+.jfeat-b{font-size:.72rem;color:rgba(240,240,240,.36);line-height:1.7;}
+.jspecs{display:flex;flex-direction:column;gap:2px;}
+.jspec{background:var(--panel);border:1px solid var(--border);padding:20px 22px;border-left:3px solid var(--gold);}
+.jspec-t{font-family:'Orbitron',monospace;font-size:.75rem;font-weight:700;color:var(--gold);margin-bottom:8px;}
+.jspec-b{font-size:.76rem;color:rgba(240,240,240,.44);line-height:1.75;}
+.jspec-tag{display:inline-block;font-family:'Share Tech Mono',monospace;font-size:.52rem;letter-spacing:.12em;padding:2px 7px;border:1px solid rgba(255,215,0,.3);color:var(--gold);text-transform:uppercase;margin-top:8px;}
+/* MUSIC */
+#music{border-top:1px solid var(--border);}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;}
+.acard{position:relative;overflow:hidden;cursor:pointer;border:1px solid var(--border);transition:all .3s;}
+.acard img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .4s;}
+.acard:hover img{transform:scale(1.04);}
+.acard:hover{border-color:rgba(255,0,51,.3);box-shadow:var(--gred);}
+.aov{position:absolute;bottom:0;left:0;right:0;padding:15px;background:linear-gradient(to top,rgba(3,4,7,.94),transparent);}
+.at{font-family:'Orbitron',monospace;font-size:.72rem;font-weight:700;letter-spacing:.08em;margin-bottom:3px;}
+.as{font-family:'Share Tech Mono',monospace;font-size:.56rem;letter-spacing:.07em;color:rgba(240,240,240,.38);}
+.abadge{position:absolute;top:10px;left:10px;font-family:'Share Tech Mono',monospace;font-size:.5rem;letter-spacing:.12em;padding:2px 6px;text-transform:uppercase;border:1px solid;background:rgba(3,4,7,.75);}
+.abadge.r{color:var(--red);border-color:rgba(255,0,51,.45);}.abadge.s{color:var(--slime);border-color:rgba(57,255,20,.36);}.abadge.p{color:var(--purple);border-color:rgba(155,0,255,.36);}
+/* ZCORE */
+#zcore{background:var(--panel);border-top:1px solid var(--border);}
+.zcgrid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center;}
+.zcimg{position:relative;overflow:hidden;border:1px solid rgba(57,255,20,.17);box-shadow:var(--gslime);}
+.zcimg img{width:100%;}
+.zcimg::after{content:'AEGIS-7 / Z-CORE ARCHITECTURE — ZERO-FAILURE SYSTEMS';position:absolute;bottom:0;left:0;right:0;font-family:'Share Tech Mono',monospace;font-size:.53rem;letter-spacing:.12em;text-align:center;padding:8px;background:rgba(3,4,7,.9);color:var(--slime);}
+.zctxt h3{font-family:'Orbitron',monospace;font-weight:900;font-size:clamp(1.3rem,2.5vw,1.9rem);margin-bottom:15px;line-height:1.15;}
+.zctxt h3 em{font-style:normal;color:var(--slime);}
+.zctxt p{font-size:.84rem;color:rgba(240,240,240,.44);line-height:1.85;margin-bottom:12px;}
+.zlist{list-style:none;display:flex;flex-direction:column;gap:7px;margin-top:16px;}
+.zlist li{font-family:'Share Tech Mono',monospace;font-size:.66rem;letter-spacing:.06em;color:rgba(240,240,240,.48);padding-left:14px;position:relative;}
+.zlist li::before{content:'▶';position:absolute;left:0;color:var(--slime);font-size:.42rem;top:3px;}
+/* WARRIOR */
+#warrior{border-top:1px solid var(--border);background:linear-gradient(135deg,rgba(255,0,51,.025),rgba(155,0,255,.025),rgba(57,255,20,.01));}
+.wgrid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+.wimg{position:relative;}
+.wimg img{width:100%;border:1px solid rgba(255,0,51,.2);box-shadow:var(--gred);}
+.wbdg{position:absolute;bottom:-15px;right:-15px;font-family:'Orbitron',monospace;font-weight:900;font-size:.56rem;letter-spacing:.12em;padding:10px 15px;background:var(--red);color:#fff;text-transform:uppercase;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px));box-shadow:var(--gred);}
+.wtxt h3{font-family:'Orbitron',monospace;font-weight:900;font-size:clamp(1.3rem,2.5vw,2rem);margin-bottom:15px;line-height:1.15;}
+.wtxt h3 .r{color:var(--red);}
+.wtxt p{font-size:.86rem;color:rgba(240,240,240,.44);line-height:1.85;margin-bottom:12px;}
+.wq{border-left:3px solid var(--purple);padding:12px 16px;margin-top:20px;background:rgba(155,0,255,.05);font-size:.78rem;line-height:1.75;font-style:italic;color:rgba(240,240,240,.6);}
+/* MODULES */
+#modules{border-top:1px solid var(--border);background:var(--panel);}
+.modgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;}
+.modcard{background:var(--black);border:1px solid var(--border);padding:30px 24px;transition:all .3s;}
+.modcard:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.1);}
+.mod-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;}
+.mod-id{font-family:'Share Tech Mono',monospace;font-size:.56rem;letter-spacing:.18em;margin-bottom:6px;}
+.mod-name{font-family:'Orbitron',monospace;font-size:.82rem;font-weight:700;}
+.mod-tag{font-family:'Share Tech Mono',monospace;font-size:.5rem;letter-spacing:.12em;padding:3px 7px;text-transform:uppercase;border:1px solid;}
+.mod-tag.live{color:var(--slime);border-color:rgba(57,255,20,.3);background:rgba(57,255,20,.07);}
+.mod-tag.building{color:var(--purple);border-color:rgba(155,0,255,.3);background:rgba(155,0,255,.07);}
+.mod-tag.queued{color:rgba(240,240,240,.3);border-color:var(--border);}
+.mod-desc{font-size:.75rem;color:rgba(240,240,240,.36);line-height:1.75;margin-bottom:14px;}
+.mod-feats{display:flex;flex-direction:column;gap:5px;}
+.mod-feat{font-family:'Share Tech Mono',monospace;font-size:.6rem;color:rgba(240,240,240,.44);padding-left:13px;position:relative;}
+.mod-feat::before{content:'▶';position:absolute;left:0;font-size:.4rem;top:2px;}
+/* TERMINAL */
+#terminal{border-top:1px solid var(--border);}
+.tbox{background:#04070f;border:1px solid rgba(57,255,20,.15);box-shadow:var(--gslime);overflow:hidden;}
+.tbar{background:rgba(57,255,20,.04);border-bottom:1px solid rgba(57,255,20,.1);padding:8px 14px;display:flex;align-items:center;gap:7px;}
+.tdot{width:9px;height:9px;border-radius:50%;}
+.tdot.r{background:var(--red);}.tdot.y{background:#ffcc00;}.tdot.g{background:var(--slime);}
+.tttl{font-family:'Share Tech Mono',monospace;font-size:.56rem;letter-spacing:.12em;color:rgba(57,255,20,.36);margin-left:7px;}
+.tbody{padding:20px 22px 28px;}
+.tl{font-family:'Share Tech Mono',monospace;font-size:.75rem;line-height:1.9;}
+.tp{color:var(--slime);}.tc{color:var(--white);}.to{color:rgba(240,240,240,.36);}
+.tr{color:var(--red);}.tpu{color:var(--purple);}.ts{color:var(--slime);}.tg{color:var(--gold);}
+.tcur{display:inline-block;width:7px;height:13px;background:var(--slime);vertical-align:middle;animation:blink 1s step-end infinite;}
+/* CONTACT */
+#contact{border-top:1px solid var(--border);background:var(--panel);}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:56px;}
+.cinfo h3{font-family:'Orbitron',monospace;font-weight:900;font-size:clamp(1.3rem,2.5vw,1.9rem);margin-bottom:22px;}
+.cinfo h3 .s{color:var(--slime);}
+.citem{display:flex;align-items:flex-start;gap:11px;margin-bottom:15px;}
+.cico{color:var(--red);font-size:.9rem;flex-shrink:0;margin-top:1px;}
+.clbl{font-family:'Share Tech Mono',monospace;font-size:.55rem;letter-spacing:.14em;color:rgba(240,240,240,.24);text-transform:uppercase;margin-bottom:3px;}
+.cval{font-size:.83rem;color:rgba(240,240,240,.6);}
+.cval a{color:var(--slime);text-decoration:none;}
+.cval a:hover{text-shadow:var(--gslime);}
+.cform{display:flex;flex-direction:column;gap:12px;}
+.cfi,.cft{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);color:var(--white);font-family:'Share Tech Mono',monospace;font-size:.75rem;padding:12px 14px;outline:none;transition:border-color .2s;letter-spacing:.06em;width:100%;}
+.cfi:focus,.cft:focus{border-color:rgba(57,255,20,.3);}
+.cft{height:105px;resize:none;}
+.cbtn{font-family:'Orbitron',monospace;font-size:.67rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:14px;background:linear-gradient(90deg,var(--red),var(--purple));color:#fff;border:none;cursor:pointer;transition:all .3s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));}
+.cbtn:hover{box-shadow:var(--gred);transform:translateY(-2px);}
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:52px 48px 24px;max-width:1360px;margin:0 auto;}
+.ftop{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px;margin-bottom:38px;}
+.fbrand{font-family:'Orbitron',monospace;font-weight:900;font-size:1.1rem;letter-spacing:.12em;}
+.fbrand .t{color:var(--red);}.fbrand .s{color:var(--slime);}.fbrand .b{color:var(--purple);}
+.ftag{font-family:'Share Tech Mono',monospace;font-size:.55rem;letter-spacing:.12em;color:rgba(240,240,240,.18);margin-top:6px;}
+.fcols{display:flex;gap:44px;flex-wrap:wrap;}
+.fcol h4{font-family:'Orbitron',monospace;font-size:.54rem;letter-spacing:.2em;color:rgba(240,240,240,.2);margin-bottom:12px;text-transform:uppercase;}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:7px;}
+.fcol ul a{font-family:'Share Tech Mono',monospace;font-size:.66rem;color:rgba(240,240,240,.38);text-decoration:none;letter-spacing:.05em;transition:color .2s;}
+.fcol ul a:hover{color:var(--slime);}
+.fbot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;border-top:1px solid var(--border);padding-top:18px;}
+.fcopy{font-family:'Share Tech Mono',monospace;font-size:.54rem;letter-spacing:.08em;color:rgba(240,240,240,.15);}
+.fst{display:flex;align-items:center;gap:6px;font-family:'Share Tech Mono',monospace;font-size:.54rem;color:var(--slime);letter-spacing:.12em;}
+.sdot{width:5px;height:5px;border-radius:50%;background:var(--slime);animation:blink 1.5s ease-in-out infinite;}
+/* BTT */
+#btt{position:fixed;bottom:26px;right:26px;width:42px;height:42px;background:var(--red);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;clip-path:polygon(0 0,calc(100% - 6px) 0,100% 6px,100% 100%,6px 100%,0 calc(100% - 6px));opacity:0;transition:opacity .3s;z-index:500;box-shadow:var(--gred);}
+#btt.show{opacity:1;}
+/* KEYFRAMES */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg);}}
+@keyframes cPulse{0%,100%{box-shadow:0 0 50px rgba(155,0,255,.5),0 0 100px rgba(255,0,51,.2);transform:translate(-50%,-50%) scale(1);}50%{box-shadow:0 0 80px rgba(155,0,255,.85),0 0 140px rgba(255,0,51,.35);transform:translate(-50%,-50%) scale(1.05);}}
+@keyframes mPulse{0%,100%{transform:translateX(-50%) scale(1);opacity:.65;}50%{transform:translateX(-50%) scale(1.12);opacity:.95;}}
+@keyframes mFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-13px);}}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
+@keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+/* RESPONSIVE */
+@media(max-width:1100px){.hinner{grid-template-columns:1fr;}.hmascot{display:none;}.zc-grid{grid-template-columns:1fr;}}
+@media(max-width:900px){
+  nav{padding:0 18px;}.nav-links{display:none;}.nav-cta{display:none;}.ham{display:flex;}
+  .sw{padding:56px 18px;}
+  .agrid,.zcgrid,.wgrid,.cgrid,.jgrid{grid-template-columns:1fr;}
+  .aimgs{height:250px;}
+  .ring-3{width:275px;height:275px;}.ring-2{width:196px;height:196px;}.ring-1{width:128px;height:128px;}.bcore{width:80px;height:80px;}.bdiag{height:295px;}
+  .mrow{grid-template-columns:repeat(2,1fr);}.met{border-bottom:1px solid var(--border);}
+  footer{padding:32px 18px 16px;}
+  .hstats{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:480px){.hstats{grid-template-columns:1fr;}.mgrid{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<div class="gbg" id="gbg"></div>
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<!-- NAV -->
+<nav id="mainnav">
+  <a href="#hero" class="nav-logo"><span class="t">T</span><span class="s">S</span><span class="b">B</span><span class="rest">FINANCIAL EMPIRE</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#zcoin">Z-Coin</a></li>
+    <li><a href="#protocol">Protocol</a></li>
+    <li><a href="#verticals">Verticals</a></li>
+    <li><a href="#jewelry">Jewelry</a></li>
+    <li><a href="#music">Music</a></li>
+    <li><a href="#modules">OS Modules</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">ENTER EMPIRE</button>
+    <button class="ham" id="ham"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mob-menu" id="mobMenu">
+  <a href="#about" onclick="closeMob()">About</a>
+  <a href="#zcoin" onclick="closeMob()">Z-Coin Mascot</a>
+  <a href="#protocol" onclick="closeMob()">Special Blend Protocol</a>
+  <a href="#verticals" onclick="closeMob()">Verticals</a>
+  <a href="#jewelry" onclick="closeMob()">Jewelry Empire</a>
+  <a href="#music" onclick="closeMob()">Music</a>
+  <a href="#zcore" onclick="closeMob()">Z-Core</a>
+  <a href="#modules" onclick="closeMob()">OS Modules</a>
+  <a href="#warrior" onclick="closeMob()">Warrior Breed DNA</a>
+  <a href="#contact" onclick="closeMob()">Contact</a>
+  <button class="mob-cta" onclick="closeMob();document.getElementById('contact').scrollIntoView({behavior:'smooth'})">ENTER EMPIRE</button>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hbg"></div>
+  <div class="hcontent">
+    <div class="hinner">
+      <div>
+        <div class="htag"><span>//</span> TSB FINANCIAL EMPIRE <span>//</span> EST. 2023 <span>//</span></div>
+        <h1 class="ht"><span class="l1">EMPIRE IS NOT</span><span class="l1">BUILT. IT IS</span><span class="l2">Engineered.</span></h1>
+        <p class="hsub">A multi-vertical financial conglomerate commanding capital markets, private equity, fintech, music, and luxury jewelry across six continents. Powered by the Special Blend Protocol.</p>
+        <div class="hstats">
+          <div class="hstat r"><div class="hstat-val r">$42B</div><div class="hstat-lbl">Assets Under Command</div></div>
+          <div class="hstat s"><div class="hstat-val s">18+</div><div class="hstat-lbl">Business Verticals</div></div>
+          <div class="hstat p"><div class="hstat-val p">$24B</div><div class="hstat-lbl">Market Cap</div></div>
+          <div class="hstat g"><div class="hstat-val g">18K+</div><div class="hstat-lbl">Gold — Jewelry Empire</div></div>
+        </div>
+        <div class="hbtns">
+          <button class="bp" onclick="document.getElementById('protocol').scrollIntoView({behavior:'smooth'})">ACTIVATE PROTOCOL</button>
+          <button class="bg" onclick="document.getElementById('jewelry').scrollIntoView({behavior:'smooth'})">💎 JEWELRY EMPIRE</button>
+        </div>
+      </div>
+      <div class="hmascot">
+        <div class="mascot-glow"></div>
+        <img class="mascot-img" src="img-mascot-crypto.png" alt="TSB Z-Coin Evil Red Crypto Mascot" onerror="this.parentElement.style.display='none'">
+        <div class="mascot-badge">Z-COIN ACTIVE</div>
+      </div>
+    </div>
+  </div>
+  <div class="tw">
+    <div class="tk">
+      <span class="ti">TSB/USD &nbsp;<span class="up">▲ +8.42%</span></span>
+      <span class="ti">$42B ASSETS UNDER COMMAND</span>
+      <span class="ti">SPECIAL BLEND PROTOCOL &nbsp;<span class="up">● ACTIVE</span></span>
+      <span class="ti">18K GOLD JEWELRY EMPIRE &nbsp;<span class="go">● LAUNCHING</span></span>
+      <span class="ti">$24B &nbsp;<span class="pu">MARKET CAP</span></span>
+      <span class="ti">ZERO-FAILURE SYSTEMS &nbsp;<span class="up">● ONLINE</span></span>
+      <span class="ti">3.2x &nbsp;<span class="up">AVG. MOIC</span></span>
+      <span class="ti">WARRIOR BREED DNA &nbsp;<span class="up">● ACTIVE</span></span>
+      <span class="ti">MiDi TecHNeeK &nbsp;<span class="pu">FINANCIAL EMPIRE</span></span>
+      <span class="ti">Z-COIN &nbsp;<span class="go">TSB CRYPTO ● LIVE</span></span>
+      <span class="ti">GRILL MOLD KITS &nbsp;<span class="go">● ORDER NOW</span></span>
+      <span class="ti">CUSTOM CHAIN DESIGN AI &nbsp;<span class="up">● ONLINE</span></span>
+      <span class="ti">TSB/USD &nbsp;<span class="up">▲ +8.42%</span></span>
+      <span class="ti">$42B ASSETS UNDER COMMAND</span>
+      <span class="ti">SPECIAL BLEND PROTOCOL &nbsp;<span class="up">● ACTIVE</span></span>
+      <span class="ti">18K GOLD JEWELRY EMPIRE &nbsp;<span class="go">● LAUNCHING</span></span>
+      <span class="ti">$24B &nbsp;<span class="pu">MARKET CAP</span></span>
+      <span class="ti">ZERO-FAILURE SYSTEMS &nbsp;<span class="up">● ONLINE</span></span>
+      <span class="ti">3.2x &nbsp;<span class="up">AVG. MOIC</span></span>
+      <span class="ti">WARRIOR BREED DNA &nbsp;<span class="up">● ACTIVE</span></span>
+      <span class="ti">MiDi TecHNeeK &nbsp;<span class="pu">FINANCIAL EMPIRE</span></span>
+      <span class="ti">Z-COIN &nbsp;<span class="go">TSB CRYPTO ● LIVE</span></span>
+      <span class="ti">GRILL MOLD KITS &nbsp;<span class="go">● ORDER NOW</span></span>
+      <span class="ti">CUSTOM CHAIN DESIGN AI &nbsp;<span class="up">● ONLINE</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="sw">
+    <div class="agrid reveal">
+      <div class="aimgs">
+        <img class="aim" src="img-tehki-photo.jpg" alt="Tehki Santiago Bill" onerror="this.style.minHeight='280px';this.style.background='rgba(255,0,51,.07)'">
+        <img class="aacc" src="img-tehki-cartoon.png" alt="TSB" onerror="this.style.background='rgba(57,255,20,.05)'">
+        <div class="abdg"><img src="img-tsb-badge.jpg" alt="TSB Badge" onerror="this.parentElement.innerHTML='<span style=font-family:Orbitron,monospace;font-size:.75rem;font-weight:900;color:#9b00ff>TSB</span>'"></div>
+      </div>
+      <div class="atext">
+        <div class="eye">// SECTION 01 — ABOUT //</div>
+        <h2>The Architecture<br>of <em>Wealth</em></h2>
+        <p>TSB Financial Empire is the primary business entity founded and led by entrepreneur, software architect, and music artist <strong style="color:var(--white)">Tehki Santiago Bill</strong>. Central hub for diverse professional ventures spanning financial, technological, creative, and luxury sectors.</p>
+        <p>No division exists in isolation. Every entity feeds the whole. From capital markets to music to autonomous jewelry manufacturing — the empire operates as one synchronized machine.</p>
+        <div class="atags">
+          <span class="atag r">Capital Markets</span><span class="atag s">Fintech</span><span class="atag p">Private Equity</span>
+          <span class="atag r">Music / MCMG</span><span class="atag s">AI Systems</span><span class="atag g">18K Jewelry</span>
+          <span class="atag p">Warrior Breed DNA</span><span class="atag g">Z-Coin Crypto</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Z-COIN -->
+<section id="zcoin">
+  <div class="sw">
+    <div class="eye">// TSB Z-COIN — EMPIRE CRYPTO MASCOT //</div>
+    <h2 class="st reveal">THE <span class="r">EVIL</span> <span class="s">Z-COIN</span></h2>
+    <div class="zc-grid reveal">
+      <div class="zc-img">
+        <img src="img-mascot-crypto.png" alt="TSB Z-Coin Evil Red Crypto Mascot" onerror="this.style.minHeight='380px';this.style.background='rgba(255,0,51,.04)'">
+        <div class="zc-stats">
+          <div class="zc-stat"><div class="zc-stat-v" style="color:var(--red)">Z</div><div class="zc-stat-l">Token Symbol</div></div>
+          <div class="zc-stat"><div class="zc-stat-v" style="color:var(--slime)">LIVE</div><div class="zc-stat-l">Status</div></div>
+          <div class="zc-stat"><div class="zc-stat-v" style="color:var(--purple)">2023</div><div class="zc-stat-l">Est. Date</div></div>
+          <div class="zc-stat"><div class="zc-stat-v" style="color:var(--gold)">TSB</div><div class="zc-stat-l">Empire Brand</div></div>
+        </div>
+      </div>
+      <div class="zc-text">
+        <h3>THE <span class="r">RED EVIL</span><br><span class="s">Z-COIN</span> — TSB's<br>CRYPTO MASCOT</h3>
+        <p>The Z-Coin is TSB Financial Empire's original crypto mascot — an evil red coin character dripping with empire energy. Gold chain, hoodie, Nikes, stacks of cash. This is what financial domination looks like in the digital age.</p>
+        <p>Built to represent the aggressive, no-limits philosophy of the TSB brand. The Z-Coin shows up wherever the empire operates — from the trading desk to the recording booth to the blockchain.</p>
+        <p>Created under the TSB Finance Zero-Failure Systems framework. The Z-Coin is more than a mascot — it's the face of a financial revolution and a digital asset in its own right.</p>
+        <div class="atags" style="margin-top:20px">
+          <span class="atag r">Zero-Failure Systems</span><span class="atag s">TSB Crypto</span>
+          <span class="atag p">Z-Token</span><span class="atag g">Digital Asset</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROTOCOL -->
+<section id="protocol">
+  <div class="sw">
+    <div class="eye">// SBP-001 — CLASSIFICATION: APEX //</div>
+    <h2 class="st reveal">THE <span class="r">SPECIAL</span> <span class="p">BLEND</span> <span class="s">PROTOCOL</span></h2>
+    <div class="bdiag reveal">
+      <svg class="bsvg" viewBox="0 0 860 440" fill="none">
+        <line x1="430" y1="220" x2="430" y2="33" stroke="rgba(155,0,255,.18)" stroke-width="1" stroke-dasharray="5,5"/>
+        <line x1="430" y1="220" x2="772" y2="132" stroke="rgba(255,0,51,.18)" stroke-width="1" stroke-dasharray="5,5"/>
+        <line x1="430" y1="220" x2="772" y2="316" stroke="rgba(57,255,20,.18)" stroke-width="1" stroke-dasharray="5,5"/>
+        <line x1="430" y1="220" x2="430" y2="415" stroke="rgba(155,0,255,.18)" stroke-width="1" stroke-dasharray="5,5"/>
+        <line x1="430" y1="220" x2="88" y2="132" stroke="rgba(255,0,51,.18)" stroke-width="1" stroke-dasharray="5,5"/>
+        <line x1="430" y1="220" x2="88" y2="316" stroke="rgba(57,255,20,.18)" stroke-width="1" stroke-dasharray="5,5"/>
+        <ellipse cx="430" cy="220" rx="178" ry="118" stroke="rgba(255,0,51,.06)" stroke-width="1" fill="none"/>
+        <ellipse cx="430" cy="220" rx="272" ry="172" stroke="rgba(155,0,255,.04)" stroke-width="1" fill="none"/>
+      </svg>
+      <div class="ring ring-1"></div><div class="ring ring-2"></div><div class="ring ring-3"></div>
+      <div class="bcore"><div class="bct">SPECIAL<br>BLEND<br>PROTOCOL</div></div>
+      <div class="bnode p" style="top:2%;left:50%;transform:translateX(-50%)"><div class="bdot"></div><div class="blbl">CAPITAL SYNTHESIS</div></div>
+      <div class="bnode r" style="top:24%;right:4%"><div class="bdot"></div><div class="blbl">RISK ENGINE</div></div>
+      <div class="bnode s" style="top:58%;right:4%"><div class="bdot"></div><div class="blbl">YIELD MATRIX</div></div>
+      <div class="bnode p" style="bottom:1%;left:50%;transform:translateX(-50%)"><div class="bdot"></div><div class="blbl">EMPIRE OUTPUT</div></div>
+      <div class="bnode r" style="top:24%;left:4%"><div class="bdot"></div><div class="blbl">ASSET LAYER</div></div>
+      <div class="bnode s" style="top:58%;left:4%"><div class="bdot"></div><div class="blbl">LIQUIDITY STREAM</div></div>
+    </div>
+    <div class="pcards reveal">
+      <div class="pcard r"><div class="pcn">SBP-01</div><div class="pct r">CAPITAL SYNTHESIS</div><div class="pcb">Multi-stream aggregation fusing institutional, private, and algorithmic sources into a unified empire reserve.</div></div>
+      <div class="pcard s"><div class="pcn">SBP-02</div><div class="pct s">YIELD MATRIX</div><div class="pcb">Dynamic optimization across asset classes. Real-time recalibration to maximize compounding output.</div></div>
+      <div class="pcard p"><div class="pcn">SBP-03</div><div class="pct p">RISK ENGINE</div><div class="pcb">Predictive threat modeling plus quantum-grade encryption protecting all empire nodes from systemic shock.</div></div>
+      <div class="pcard w"><div class="pcn">SBP-04</div><div class="pct w">EMPIRE OUTPUT</div><div class="pcb">The final synthesis: capital deployed at scale, empire expanded, wealth compounded across every vertical.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- METRICS -->
+<section id="metrics">
+  <div class="sw" style="padding-top:0;padding-bottom:0;">
+    <div class="mrow">
+      <div class="met reveal"><div class="mv r">$42B</div><div class="ml">Assets Under Command</div></div>
+      <div class="met reveal"><div class="mv s">99.97%</div><div class="ml">Protocol Uptime</div></div>
+      <div class="met reveal"><div class="mv p">$24B</div><div class="ml">Market Cap</div></div>
+      <div class="met reveal"><div class="mv r">3.2x</div><div class="ml">Avg. MOIC</div></div>
+      <div class="met reveal"><div class="mv s">18+</div><div class="ml">Verticals</div></div>
+      <div class="met reveal"><div class="mv g">18K</div><div class="ml">Gold Standard</div></div>
+      <div class="met reveal"><div class="mv p">8.4M</div><div class="ml">Sq. Ft. Managed</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VERTICALS -->
+<section id="verticals">
+  <div class="sw">
+    <div class="eye">// EMPIRE VERTICALS //</div>
+    <h2 class="st reveal">WHAT THE <span class="s">EMPIRE</span> CONTROLS</h2>
+    <div class="vgrid">
+      <div class="vcard va reveal"><span class="vfl r">FLAGSHIP</span><div class="vico">⬡</div><div class="vt">TSB CAPITAL MARKETS</div><div class="vb">Core engine. Institutional-grade trading desks, fixed income structuring, and equity capital deployment across North American and global markets.</div></div>
+      <div class="vcard vb reveal"><span class="vfl s">HIGH YIELD</span><div class="vico">◈</div><div class="vt">PRIVATE EQUITY</div><div class="vb">Concentrated bets on asymmetric opportunity. Acquire, restructure, scale — then exit on our terms. Avg. MOIC: 3.2x.</div></div>
+      <div class="vcard vc reveal"><span class="vfl p">TECH</span><div class="vico">⬟</div><div class="vt">TSB TECHNOLOGY DIVISION</div><div class="vb">Proprietary fintech infrastructure, algorithmic trading systems, enterprise SaaS. Powered by AEGIS-7 / Z-Core architecture.</div></div>
+      <div class="vcard vd reveal"><span class="vfl r">CREATIVE</span><div class="vico">⬢</div><div class="vt">MCMG LABEL</div><div class="vb">The empire's music arm. MiDi TecHNeeK and the Warrior Breed DNA catalog generating royalty streams across every platform.</div></div>
+      <div class="vcard ve reveal"><span class="vfl s">AI</span><div class="vico">◆</div><div class="vt">MiDiOS AGENTS</div><div class="vb">Structural AI communication and agent flow. 88.6k confidence rating. Automated scalability across all empire nodes.</div></div>
+      <div class="vcard vf reveal"><span class="vfl p">SOVEREIGN</span><div class="vico">⬡</div><div class="vt">ASSET SOVEREIGNTY</div><div class="vb">Hard asset, digital asset, and IP protection. UCC Articles 3, 4, 4A and 9. Empire wealth secured at every layer.</div></div>
+      <div class="vcard vg reveal"><span class="vfl g">LUXURY</span><div class="vico">💎</div><div class="vt">TSB JEWELRY EMPIRE</div><div class="vb">18K gold minimum. Autonomous bot manufacturing. Custom grill mold kits. AI-powered chain design. Special Blend certified pieces.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- JEWELRY EMPIRE -->
+<section id="jewelry">
+  <div class="sw">
+    <div class="eye">// TSB JEWELRY EMPIRE — LUXURY DIVISION //</div>
+    <h2 class="st reveal">THE <span class="g">GOLD</span> <span class="r">EMPIRE</span></h2>
+    <div class="jgrid reveal">
+      <div class="jtext">
+        <h3><span class="g">18K GOLD.</span> DIAMONDS.<br><span class="r">AUTONOMOUS</span> BOTS.<br>ZERO COMPROMISE.</h3>
+        <p>TSB Jewelry Empire sets a new standard. Every piece starts at 18-karat gold minimum. Diamonds, precious stones, and premium materials — no shortcuts, no compromises. The empire only delivers the best.</p>
+        <p>Autonomous bots design and manufacture every piece in the digital realm before physical production. Each item carries a digital element — NFC chip verification, AR preview, or digital twin — fusing the physical and digital worlds.</p>
+        <div class="jfeatures">
+          <div class="jfeat">
+            <div class="jfeat-ico">🦷</div>
+            <div class="jfeat-t">GRILL MOLD KIT PROGRAM</div>
+            <div class="jfeat-b">Order online. Receive your custom mold kit. Send it back. Bots manufacture your perfect grillz in 18K gold.</div>
+          </div>
+          <div class="jfeat">
+            <div class="jfeat-ico">⛓️</div>
+            <div class="jfeat-t">CUSTOM CHAIN DESIGN AI</div>
+            <div class="jfeat-b">AI-powered digital design kit emailed to you. Build your chain, select materials, create patents, submit for production.</div>
+          </div>
+          <div class="jfeat">
+            <div class="jfeat-ico">🤖</div>
+            <div class="jfeat-t">BOT MANUFACTURING</div>
+            <div class="jfeat-b">Autonomous bot pipeline from design to production. Every piece engineered to perfection before physical creation.</div>
+          </div>
+          <div class="jfeat">
+            <div class="jfeat-ico">📡</div>
+            <div class="jfeat-t">DIGITAL INTEGRATION</div>
+            <div class="jfeat-b">NFC chip authenticity, AR preview, digital twin. Each piece exists in both the physical and digital empire.</div>
+          </div>
+        </div>
+        <div style="margin-top:24px">
+          <button class="bg" style="margin-right:12px">ORDER GRILL KIT</button>
+          <button class="bs">DESIGN YOUR CHAIN</button>
+        </div>
+      </div>
+      <div class="jspecs">
+        <div class="jspec">
+          <div class="jspec-t">MATERIAL STANDARD</div>
+          <div class="jspec-b">18-karat gold minimum on every single piece. VVS diamonds, precious stones, and premium materials only. No exceptions — this is the empire standard.</div>
+          <span class="jspec-tag">18K GOLD MINIMUM</span>
+        </div>
+        <div class="jspec">
+          <div class="jspec-t">GRILL MOD KIT PROGRAM</div>
+          <div class="jspec-b">Place your order online → receive a precision mold kit shipped to your door → make your impression → return the kit → autonomous bots manufacture your custom 18K grillz to exact specification.</div>
+          <span class="jspec-tag">SHIPS WORLDWIDE</span>
+        </div>
+        <div class="jspec">
+          <div class="jspec-t">CUSTOM CHAIN DESIGN KIT</div>
+          <div class="jspec-b">Digital program delivered to your email. Use AI tools to design every link, select gold weight and stone placement, create your patents, and submit your Special Blend certified design for production.</div>
+          <span class="jspec-tag">AI-POWERED</span>
+        </div>
+        <div class="jspec">
+          <div class="jspec-t">SPECIAL BLEND CERTIFIED</div>
+          <div class="jspec-b">Every TSB jewelry piece is a Special Blend Protocol-certified product. 30% royalty routes through BizzyB$ master vault. Each piece authenticated on the Z-Coin digital ledger.</div>
+          <span class="jspec-tag">SBP CERTIFIED</span>
+        </div>
+        <div class="jspec">
+          <div class="jspec-t">BIZZYB$ INTEGRATION</div>
+          <div class="jspec-b">All jewelry revenue auto-routes through the BizzyB$ central ledger. 30% extraction to empire vault. Beast Mode bots handle market positioning and pricing optimization.</div>
+          <span class="jspec-tag">30% AUTO-EXTRACT</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MUSIC -->
+<section id="music">
+  <div class="sw">
+    <div class="eye">// MCMG LABEL — WARRIOR BREED DNA //</div>
+    <h2 class="st reveal">THE <span class="r">SOUND</span> OF THE <span class="s">EMPIRE</span></h2>
+    <div class="mgrid">
+      <div class="acard reveal"><img src="img-midi-bmw.webp" alt="Street Cred" onerror="this.style.background='rgba(255,0,51,.07)';this.style.minHeight='280px'"><span class="abadge r">NEW</span><div class="aov"><div class="at">STREET CRED</div><div class="as">The Grind Never Stops · MiDi TecHNeeK</div></div></div>
+      <div class="acard reveal"><img src="img-street-cred.png" alt="Street Cred Cover" onerror="this.style.background='rgba(155,0,255,.07)';this.style.minHeight='280px'"><span class="abadge p">EXPLICIT</span><div class="aov"><div class="at">STREET CRED</div><div class="as">Ft. T-Smooth, Redline, Money Mike</div></div></div>
+      <div class="acard reveal"><img src="img-juzt-demo.png" alt="Juzt A Demo" onerror="this.style.background='rgba(57,255,20,.04)';this.style.minHeight='280px'"><span class="abadge s">60 TRACKS</span><div class="aov"><div class="at">JUZT A DEMO</div><div class="as">60 Song Project · Warrior Breed DNA</div></div></div>
+      <div class="acard reveal"><img src="img-midi-mixtape.png" alt="MiDi Mixtape" onerror="this.style.background='rgba(255,0,51,.05)';this.style.minHeight='280px'"><span class="abadge r">MIXTAPE</span><div class="aov"><div class="at">MiDi TecHNeeK MIXTAPE</div><div class="as">TSB Finance · Financial Empire</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ZCORE -->
+<section id="zcore">
+  <div class="sw">
+    <div class="eye">// AEGIS-7 / CODE Z ARCHITECTURE //</div>
+    <h2 class="st reveal">Z-CORE <span class="s">ZERO-FAILURE</span> SYSTEMS</h2>
+    <div class="zcgrid reveal">
+      <div class="zcimg"><img src="img-dashboard.png" alt="Z-Core Dashboard" onerror="this.style.minHeight='260px';this.style.background='rgba(57,255,20,.03)'"></div>
+      <div class="zctxt">
+        <h3>Integrated Operational &amp;<br><em>Strategic Dashboard</em></h3>
+        <p>The TSB AEGIS-7 system is the empire's operational nervous system. Real-time threat analysis, quantum-secured comms, and autonomous systems engineering running 24/7 across all verticals.</p>
+        <p>Every financial node, creative division, technology arm, and jewelry production pipeline feeds into one integrated command interface.</p>
+        <ul class="zlist">
+          <li>Neural-Linked HUD · Real-time adversarial threat overlay (98.6% confidence)</li>
+          <li>Quantum-Secured Comms · Immutable end-to-end encryption</li>
+          <li>Modular DRUM System · ISR, Lidar/Thermal, Active Shield</li>
+          <li>MiDiOS Agents · Structural AI flow — 88.6k active nodes</li>
+          <li>Jewelry Bot Pipeline · Autonomous production monitoring</li>
+          <li>BizzyB$ Sync · 30% royalty extraction — all sectors</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OS MODULES -->
+<section id="modules">
+  <div class="sw">
+    <div class="eye">// EMPIRE OPERATING SYSTEMS — BASE44 BLUEPRINT //</div>
+    <h2 class="st reveal">OS <span class="p">MODULE</span> REGISTRY</h2>
+    <div class="modgrid">
+      {[
+        {id:'SBOS',name:'Sovereign Business OS',color:'var(--red)',status:'live',desc:'Base kernel. Manages resource distribution, bot-net scheduling, and cross-platform communication across all empire sectors.',feats:['Bot-net scheduling (500k–1M/sector)','Resource distribution','Cross-platform comms','BizzyB$ central sync']},
+        {id:'BARBER-OS',name:'Barber OS',color:'var(--purple)',status:'building',desc:'Grooming industry management platform. Full CRM, automated scheduling, inventory, and integrated financial royalty splits.',feats:['CRM system','Auto-scheduling','Inventory management','Financial royalty splits']},
+        {id:'MKM-OS',name:'MKM OS',color:'var(--slime)',status:'building',desc:'Music production software. Autonomous MIDI generation, AI-driven composition, and trend-predictive audio engineering.',feats:['Autonomous MIDI generation','AI composition tools','Trend-predictive audio','MiDi TecHNeeK integration']},
+        {id:'ECTE',name:'ECTE Theater',color:'#00ccff',status:'queued',desc:'Virtual 3D theater management. Motion-sync to film, interactive haptics, and atmospheric environmental control.',feats:['Motion-sync film','Interactive haptics','Atmospheric control','3D theater management']},
+        {id:'JEWELRY-OS',name:'Jewelry Empire OS',color:'var(--gold)',status:'queued',desc:'18K gold manufacturing pipeline. Autonomous bot production, grill mold kit order flow, chain design AI, digital integration.',feats:['Autonomous bot manufacturing','Grill mold kit program','AI chain design kit','NFC/AR digital integration']},
+        {id:'GUARDIAN',name:'Guardian Suite',color:'var(--slime)',status:'live',desc:'AI-native security. Real-time threat detection, node isolation, adaptive encryption across all empire data streams.',feats:['Real-time threat scan','Node isolation','Adaptive encryption','Malware prevention']},
+      ].map(m => `
+      <div class="modcard reveal" style="border-top:2px solid ${m.color}">
+        <div class="mod-top">
+          <div>
+            <div class="mod-id" style="color:${m.color}">${m.id}</div>
+            <div class="mod-name" style="color:${m.color}">${m.name}</div>
+          </div>
+          <span class="mod-tag ${m.status}">${m.status.toUpperCase()}</span>
+        </div>
+        <div class="mod-desc">${m.desc}</div>
+        <div class="mod-feats">
+          ${m.feats.map(f=>`<div class="mod-feat" style="--c:${m.color}">${f}</div>`).join('')}
+        </div>
+      </div>`).join('')}
+    </div>
+  </div>
+</section>
+
+<!-- WARRIOR -->
+<section id="warrior">
+  <div class="sw">
+    <div class="wgrid reveal">
+      <div class="wimg">
+        <img src="img-tehki-cartoon.png" alt="Tehki Santiago Bill" onerror="this.style.minHeight='380px';this.style.background='rgba(255,0,51,.03)'">
+        <div class="wbdg">WARRIOR BREED DNA</div>
+      </div>
+      <div class="wtxt">
+        <div class="eye">// FOUNDER — TEHKI SANTIAGO BILL //</div>
+        <h3><span class="r">WARRIOR</span> BREED DNA.<br>THE GRIND IS CODED IN.</h3>
+        <p>Founded and led by entrepreneur, software architect, and music artist Tehki Santiago Bill — TSB Financial Empire is built on the principle that empire is not inherited. It is engineered through discipline, systems, and relentless execution.</p>
+        <p>Operating across Los Angeles, Las Vegas, Houston, Miami — and expanding to every major city. No division exists in isolation. Every entity feeds the whole.</p>
+        <div class="wq">"We don't dream about things anymore. We turn our dreams into goals. We believe that anything is possible — especially being close to perfection. We come from the only thing that is perfect to this existence."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TERMINAL -->
+<section id="terminal">
+  <div class="sw">
+    <div class="eye">// SYSTEM INTERFACE — LIVE //</div>
+    <h2 class="st reveal">EMPIRE <span class="s">COMMAND LINE</span></h2>
+    <div class="tbox reveal">
+      <div class="tbar"><div class="tdot r"></div><div class="tdot y"></div><div class="tdot g"></div><div class="tttl">TSB_FINANCIAL_EMPIRE — SBP v7.4.1 — ZERO-FAILURE — JEWELRY-OS QUEUED — BASE44 BLUEPRINT ACTIVE</div></div>
+      <div class="tbody">
+        <div class="tl"><span class="tp">tsb@empire:~$ </span><span class="tc">run special-blend-protocol --mode=APEX --clearance=WARRIOR-BREED</span></div>
+        <div class="tl"><span class="to">[ OK ] Initializing Special Blend Protocol — Tehki Santiago Bill authorized.</span></div>
+        <div class="tl"><span class="ts">[ ▲  ] Capital Synthesis: ONLINE — $42B reserve confirmed</span></div>
+        <div class="tl"><span class="ts">[ ▲  ] Yield Matrix: CALIBRATED — blend index 1,347.88</span></div>
+        <div class="tl"><span class="tr">[ ★  ] Risk Engine: ARMED — AEGIS-7 threat matrix: CLEAR</span></div>
+        <div class="tl"><span class="tpu">[ ⬡  ] Z-Core Nodes: 2,048 / 2,048 ACTIVE</span></div>
+        <div class="tl"><span class="tg">[ 💎 ] Jewelry Empire OS: QUEUED — 18K gold pipeline: READY</span></div>
+        <div class="tl"><span class="tg">[ ⛓️  ] Grill Mold Kit Program: ONLINE — Chain Design AI: ACTIVE</span></div>
+        <div class="tl"><span class="to">&nbsp;</span></div>
+        <div class="tl"><span class="tp">tsb@empire:~$ </span><span class="tc">query base44-blueprint --scope=ALL_MODULES</span></div>
+        <div class="tl"><span class="ts">[ ▲  ] SBOS: LIVE · Barber OS: BUILDING · MKM OS: BUILDING</span></div>
+        <div class="tl"><span class="tg">[ 💎 ] Jewelry OS: QUEUED · ECTE: QUEUED</span></div>
+        <div class="tl"><span class="ts">[ ▲  ] Guardian Suite: LIVE — All nodes encrypted</span></div>
+        <div class="tl"><span class="tpu">[ ⬡  ] BizzyB$ Ledger: 30% extraction ACTIVE — Beast Mode: 25k/sector</span></div>
+        <div class="tl"><span class="to">&nbsp;</span></div>
+        <div class="tl"><span class="tp">tsb@empire:~$ </span><span class="tc">blend --execute --signature=TSB-APEX-WARRIOR-BREED-JEWELRY-001</span></div>
+        <div class="tl"><span class="tpu">[ ⬡  ] BLEND EXECUTED. Empire operational. All protocols nominal. Warrior Breed DNA: ACTIVE.</span></div>
+        <div class="tl"><span class="to">&nbsp;</span></div>
+        <div class="tl"><span class="tp">tsb@empire:~$ </span><span class="tcur"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="sw">
+    <div class="eye">// CONTACT THE EMPIRE //</div>
+    <h2 class="st reveal">GET IN <span class="s">COMMAND</span></h2>
+    <div class="cgrid reveal">
+      <div class="cinfo">
+        <h3>Connect with the <span class="s">Empire</span></h3>
+        <div class="citem"><div class="cico">📍</div><div><div class="clbl">Locations</div><div class="cval">Los Angeles · Las Vegas · Houston · Miami<br><span style="color:var(--slime);font-size:.72rem;font-family:'Share Tech Mono',monospace;letter-spacing:.06em">WE WILL BE MAKING OUR WAY TOWARDS YOU......</span></div></div></div>
+        <div class="citem"><div class="cico">✉</div><div><div class="clbl">Empire Email</div><div class="cval"><a href="mailto:Tsbfinancial.empire@mail.com">Tsbfinancial.empire@mail.com</a></div></div></div>
+        <div class="citem"><div class="cico">✉</div><div><div class="clbl">Direct</div><div class="cval"><a href="mailto:Tehkibill4@gmail.com">Tehkibill4@gmail.com</a></div></div></div>
+        <div class="citem"><div class="cico">💎</div><div><div class="clbl">Jewelry Orders</div><div class="cval" style="color:var(--gold)">Grill Kits · Custom Chains · 18K Gold</div></div></div>
+        <div class="citem"><div class="cico">◆</div><div><div class="clbl">System Status</div><div class="cval" style="color:var(--slime)">● All Systems Operational · SBP Active</div></div></div>
+      </div>
+      <div>
+        <div class="cform">
+          <input class="cfi" type="text" placeholder="YOUR NAME" required>
+          <input class="cfi" type="email" placeholder="YOUR EMAIL" required>
+          <input class="cfi" type="text" placeholder="SUBJECT / DIVISION (e.g. JEWELRY ORDER, INVESTMENT)">
+          <textarea class="cft" placeholder="YOUR MESSAGE TO THE EMPIRE..."></textarea>
+          <button class="cbtn" type="button" onclick="handleContact(this)">SEND TO EMPIRE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ftop">
+    <div>
+      <div class="fbrand"><span class="t">T</span><span class="s">S</span><span class="b">B</span><span style="color:rgba(240,240,240,.72)"> FINANCIAL EMPIRE</span></div>
+      <div class="ftag">// SPECIAL BLEND PROTOCOL · ZERO-FAILURE SYSTEMS · WARRIOR BREED DNA · 18K JEWELRY EMPIRE //</div>
+    </div>
+    <div class="fcols">
+      <div class="fcol"><h4>Empire</h4><ul>
+        <li><a href="#about">About TSB</a></li><li><a href="#warrior">Leadership</a></li>
+        <li><a href="#">Governance</a></li><li><a href="#">Careers</a></li>
+        <li><a href="#">Press Room</a></li><li><a href="#">Annual Reports</a></li>
+      </ul></div>
+      <div class="fcol"><h4>Verticals</h4><ul>
+        <li><a href="#verticals">Capital Markets</a></li><li><a href="#verticals">Private Equity</a></li>
+        <li><a href="#verticals">TSB Technology</a></li><li><a href="#music">MCMG Label</a></li>
+        <li><a href="#zcoin">Z-Coin Crypto</a></li><li><a href="#jewelry">Jewelry Empire</a></li>
+      </ul></div>
+      <div class="fcol"><h4>Jewelry</h4><ul>
+        <li><a href="#jewelry">18K Gold Pieces</a></li><li><a href="#jewelry">Grill Mold Kits</a></li>
+        <li><a href="#jewelry">Chain Design AI</a></li><li><a href="#jewelry">Custom Orders</a></li>
+        <li><a href="#jewelry">Digital Certificates</a></li>
+      </ul></div>
+      <div class="fcol"><h4>Legal</h4><ul>
+        <li><a href="#">UCC Compliance</a></li><li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Empire</a></li><li><a href="#">Risk Disclosures</a></li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="fbot">
+    <div class="fcopy">© 2026 TSB FINANCIAL EMPIRE · TEHKI SANTIAGO BILL · ALL NODES RESERVED · SBP-APEX-JEWELRY-001</div>
+    <div class="fst"><div class="sdot"></div>ALL SYSTEMS OPERATIONAL</div>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible');});},{threshold:.07});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+// Parallax
+document.addEventListener('mousemove',e=>{const x=(e.clientX/window.innerWidth-.5)*12,y=(e.clientY/window.innerHeight-.5)*12,bg=document.getElementById('gbg');if(bg)bg.style.transform=`translate(${x*.18}px,${y*.18}px)`;});
+// Mobile menu
+const ham=document.getElementById('ham'),mob=document.getElementById('mobMenu'),nav=document.getElementById('mainnav');
+ham.addEventListener('click',()=>{ham.classList.toggle('open');mob.classList.toggle('open');});
+function closeMob(){ham.classList.remove('open');mob.classList.remove('open');}
+document.addEventListener('click',e=>{if(!nav.contains(e.target)&&!mob.contains(e.target))closeMob();});
+// Back to top
+const btt=document.getElementById('btt');
+window.addEventListener('scroll',()=>{btt.classList.toggle('show',window.scrollY>400);});
+// Active nav
+const secs=document.querySelectorAll('section[id]'),navAs=document.querySelectorAll('.nav-links a');
+new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)navAs.forEach(a=>{a.style.color=a.getAttribute('href')==='#'+e.target.id?'var(--slime)':'';});});},{threshold:.4}).observe&&secs.forEach(s=>new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)navAs.forEach(a=>{a.style.color=a.getAttribute('href')==='#'+e.target.id?'var(--slime)':'';});});},{threshold:.4}).observe(s));
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
+// Contact
+function handleContact(btn){const orig=btn.textContent;btn.textContent='TRANSMISSION SENT ✓';btn.style.background='linear-gradient(90deg,#1a8a07,var(--purple,#9b00ff))';setTimeout(()=>{btn.textContent=orig;btn.style.background='';},3000);}
+</script>
+</body>
+</html>
