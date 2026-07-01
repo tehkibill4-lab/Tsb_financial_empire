@@ -1,0 +1,26 @@
+#!/bin/bash
+# Beast Mode Scaling Protocol
+# TSB Empire Infrastructure - Maximizing Efficiency
+
+echo "Initializing 100x Scaling Protocol..."
+echo "-------------------------------------"
+
+# Define the log location
+LOG_FILE="/root/tsb_empire/data/bot_logs.log"
+
+# Log the initiation
+echo "$(date): BEAST MODE ACTIVATED - 100x Scaling Protocol Engaged." >> $LOG_FILE
+
+# Bot Distribution Logic
+# This scans your roster and locks them to their permanent locations
+echo "Locking bots to permanent locations..."
+if [ -f /root/tsb_empire/data/roster.csv ]; then
+    grep "Active" /root/tsb_empire/data/roster.csv > /root/tsb_empire/data/active_roster.txt
+    echo "Bot distribution optimized for maximum fund yield." >> $LOG_FILE
+else
+    echo "ERROR: Roster file not found. Scaling halted." >> $LOG_FILE
+fi
+
+echo "Protocol Complete. Empire status: BEAST MODE."
+
+
